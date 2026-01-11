@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Focus Flight</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>✈️ Focus Flight</h1>
+<p>Convierte tu tiempo de enfoque en un vuelo real</p>
+
+<select id="from">
+  <option value="madrid">Madrid</option>
+  <option value="paris">París</option>
+  <option value="rome">Roma</option>
+</select>
+
+<select id="to">
+  <option value="paris">París</option>
+  <option value="madrid">Madrid</option>
+  <option value="rome">Roma</option>
+</select>
+
+<br><br>
+<button onclick="startFlight()">Iniciar vuelo</button>
+
+<h2 id="timer">00:00</h2>
+
+<div id="map">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Europe_blank_map.png">
+  <div id="plane">✈️</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
