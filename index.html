@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
   <title>Focus Flight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Leaflet CSS -->
+  <!-- Leaflet CSS (SIN integrity) -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-sA+e2k3b0t7k2h9t3g6s2Jk3QY9+T9mT2bH8g1x0oMw="
-    crossorigin=""
   />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="brand">
-      <h1>Focus Flight</h1>
-      <p>Convierte tu sesión de enfoque en un vuelo real</p>
-    </div>
 
-    <div class="controls">
-      <label>
-        Origen
-        <select id="from">
-          <option value="madrid">Madrid</option>
-          <option value="paris">París</option>
-          <option value="rome">Roma</option>
-        </select>
-      </label>
+<header class="top">
+  <div class="brand">
+    <h1>Focus Flight</h1>
+    <p>Convierte tu sesión de enfoque en un vuelo real</p>
+  </div>
 
-      <label>
-        Destino
-        <select id="to">
-          <option value="paris">París</option>
-          <option value="madrid">Madrid</option>
-          <option value="rome">Roma</option>
-        </select>
-      </label>
+  <div class="controls">
+    <label>
+      Origen
+      <select id="from">
+        <option value="madrid">Madrid</option>
+        <option value="paris">París</option>
+        <option value="rome">Roma</option>
+      </select>
+    </label>
 
-      <button id="startBtn">Iniciar vuelo</button>
-      <button id="stopBtn">Parar</button>
-    </div>
+    <label>
+      Destino
+      <select id="to">
+        <option value="paris">París</option>
+        <option value="madrid">Madrid</option>
+        <option value="rome">Roma</option>
+      </select>
+    </label>
 
-    <div class="timer-wrap">
-      <div id="timer">00:00</div>
-    </div>
-  </header>
+    <button id="startBtn">Iniciar vuelo</button>
+    <button id="stopBtn">Parar</button>
+  </div>
 
-  <!-- MAPA: Leaflet -->
-  <main>
-    <div id="map"></div>
-  </main>
+  <div class="timer-wrap">
+    <div id="timer">00:00</div>
+  </div>
+</header>
 
-  <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-o9N1j8f1y6+Y3y0K6V8v2u1k5b1wq3c1X5e3j9r4FzE="
-    crossorigin=""
-  ></script>
+<main>
+  <div id="map"></div>
+</main>
 
-  <script src="script.js"></script>
+<!-- Leaflet JS (SIN integrity) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
