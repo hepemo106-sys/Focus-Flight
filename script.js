@@ -16,11 +16,10 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 const planeIcon = L.divIcon({
-  html: `<div class="plane-icon">
-           <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Airplane_silhouette.png">
-         </div>`,
-  iconSize: [40, 40],
-  iconAnchor: [20, 20]
+  className: "plane-icon",
+  html: `<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Airplane_silhouette.png">`,
+  iconSize: [36, 36],
+  iconAnchor: [18, 18]
 });
 
 let planeMarker = null;
@@ -98,6 +97,7 @@ function movePlane(start, end) {
 
   moveInterval = setInterval(() => {
     t++;
+
     planeMarker.setLatLng([
       start.lat + dLat * t,
       start.lng + dLng * t
