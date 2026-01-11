@@ -91,4 +91,29 @@ main {
 
 #map {
   width: min(1100px, 95%);
-  height
+  height: 620px;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Quitar UI Leaflet */
+.leaflet-control-attribution,
+.leaflet-control-zoom {
+  display: none;
+}
+
+/* 🔥 CLAVE: eliminar fondo del icono Leaflet */
+.leaflet-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Avión */
+.plane-icon img {
+  width: 36px;
+  height: 36px;
+  display: block;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
+}
