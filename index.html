@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Focus Flight</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2k3b0t7k2h9t3g6s2Jk3QY9+T9mT2bH8g1x0oMw="
+    crossorigin=""
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="top">
+    <div class="brand">
+      <h1>Focus Flight</h1>
+      <p>Convierte tu sesión de enfoque en un vuelo real</p>
+    </div>
 
-<h1>Focus Flight</h1>
-<p>Convierte tu sesión de enfoque en un vuelo real</p>
+    <div class="controls">
+      <label>
+        Origen
+        <select id="from">
+          <option value="madrid">Madrid</option>
+          <option value="paris">París</option>
+          <option value="rome">Roma</option>
+        </select>
+      </label>
 
-<div class="controls">
-  <select id="from">
-    <option value="madrid">Madrid</option>
-    <option value="paris">París</option>
-    <option value="rome">Roma</option>
-  </select>
+      <label>
+        Destino
+        <select id="to">
+          <option value="paris">París</option>
+          <option value="madrid">Madrid</option>
+          <option value="rome">Roma</option>
+        </select>
+      </label>
 
-  <select id="to">
-    <option value="paris">París</option>
-    <option value="madrid">Madrid</option>
-    <option value="rome">Roma</option>
-  </select>
+      <button id="startBtn">Iniciar vuelo</button>
+      <button id="stopBtn">Parar</button>
+    </div>
 
-  <button onclick="startFlight()">Iniciar vuelo</button>
-</div>
+    <div class="timer-wrap">
+      <div id="timer">00:00</div>
+    </div>
+  </header>
 
-<h2 id="timer">00:00</h2>
+  <!-- MAPA: Leaflet -->
+  <main>
+    <div id="map"></div>
+  </main>
 
-<div id="map">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Europe_blank_map.png" alt="Mapa de Europa">
-  <img id="plane" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Airplane_silhouette.png" alt="Avión">
-</div>
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o9N1j8f1y6+Y3y0K6V8v2u1k5b1wq3c1X5e3j9r4FzE="
+    crossorigin=""
+  ></script>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
