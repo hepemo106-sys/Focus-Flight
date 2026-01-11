@@ -1,7 +1,7 @@
 const cities = {
-  madrid: { x: 200, y: 350 },
-  paris: { x: 240, y: 220 },
-  rome: { x: 310, y: 360 }
+  madrid: { x: 260, y: 380 },
+  paris: { x: 300, y: 240 },
+  rome: { x: 380, y: 400 }
 };
 
 let duration = 30 * 60; // 30 minutos
@@ -22,10 +22,10 @@ function startFlight() {
   interval = setInterval(() => {
     elapsed++;
 
-    let progress = elapsed / duration;
+    const progress = elapsed / duration;
 
-    let x = start.x + (end.x - start.x) * progress;
-    let y = start.y + (end.y - start.y) * progress;
+    const x = start.x + (end.x - start.x) * progress;
+    const y = start.y + (end.y - start.y) * progress;
 
     plane.style.left = x + "px";
     plane.style.top = y + "px";
@@ -34,15 +34,16 @@ function startFlight() {
 
     if (elapsed >= duration) {
       clearInterval(interval);
-      alert("✈️ Vuelo completado. Bien hecho.");
+      alert("Vuelo completado. Buen trabajo.");
     }
   }, 1000);
 }
 
 function updateTimer() {
-  let remaining = duration - elapsed;
-  let min = Math.floor(remaining / 60);
-  let sec = remaining % 60;
+  const remaining = duration - elapsed;
+  const min = Math.floor(remaining / 60);
+  const sec = remaining % 60;
+
   document.getElementById("timer").innerText =
     min + ":" + sec.toString().padStart(2, "0");
 }
