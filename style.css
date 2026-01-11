@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #0b1c2d;
+  color: white;
+}
+
+#map {
+  position: relative;
+  width: 600px;
+  margin: 20px auto;
+}
+
+#map img {
+  width: 100%;
+}
+
+#plane {
+  position: absolute;
+  font-size: 24px;
+}
